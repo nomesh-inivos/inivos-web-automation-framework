@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-01T23:27:44 IST" name="Testing Suit" finished-at="2022-11-01T23:27:44 IST" duration-ms="66">
+    <groups>
+    </groups>
+    <test started-at="2022-11-01T23:27:44 IST" name="Regression" finished-at="2022-11-01T23:27:44 IST" duration-ms="66">
+      <class name="BaseTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:BaseTest@5c80cf32]" started-at="2022-11-01T23:27:44 IST" name="beforeTest" finished-at="2022-11-01T23:27:44 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="AfterTest()[pri:0, instance:BaseTest@5c80cf32]" started-at="2022-11-01T23:27:44 IST" name="AfterTest" finished-at="2022-11-01T23:27:44 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTest -->
+      </class> <!-- BaseTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- Testing Suit -->
+</testng-results>
