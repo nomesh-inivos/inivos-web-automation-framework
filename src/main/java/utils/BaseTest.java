@@ -45,7 +45,7 @@ public class BaseTest {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
         driver.manage().window().maximize();
-        driver.get(Constants.URL);
+        driver.get("https://www.amazon.com");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -70,6 +70,9 @@ public class BaseTest {
 
     @AfterTest
     public void AfterTest() {
+        if(driver !=null){
+            driver.quit();
+        }
         extent.flush();
     }
 
