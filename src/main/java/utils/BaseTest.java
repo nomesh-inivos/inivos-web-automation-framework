@@ -23,7 +23,7 @@ public class BaseTest {
     private static WebDriver driver;
     private static ExtentReports extent;
     private static ExtentHtmlReporter htmlReporter;
-    private static ExtentTest logger;
+    public static ExtentTest logger;
 
 
     @BeforeTest

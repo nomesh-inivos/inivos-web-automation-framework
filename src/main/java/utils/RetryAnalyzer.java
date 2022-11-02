@@ -8,7 +8,7 @@ import org.testng.ITestResult;
  */
 public class RetryAnalyzer implements IRetryAnalyzer {
   int count = 0;
-  int retryCount = 1; //number of retry efforts
+  int retryCount = 0; //number of retry efforts
 
     @Override
     public boolean retry(ITestResult iTestResult) {
