@@ -45,7 +45,7 @@ public class BaseTest {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
         driver.manage().window().maximize();
-        driver.get("https://www.amazon.com");
+        driver.get(Constants.URL);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 

@@ -33,5 +33,9 @@ public class HomePageEvents {
 //        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(HomePageElements.SKIP_COOKIES_NOTICE_BUTTON)));
         wait.until(ExpectedConditions.elementToBeClickable(
                 elementFetch.getWebElement("XPATH", HomePageElements.signInButton))).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(
+                elementFetch.getWebElement("XPATH", HomePageElements.securitySignInButton))).click();
+
     }
 }

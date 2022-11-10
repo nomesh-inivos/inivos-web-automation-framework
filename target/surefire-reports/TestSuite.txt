@@ -1,17 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 45.896 sec <<< FAILURE!
-samplemethodForEmailEntering(SampleTest)  Time elapsed: 15.733 sec  <<< FAILURE!
-org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=107.0.5304.87)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.341 sec <<< FAILURE!
+samplemethodForEmailEntering(SampleTest)  Time elapsed: 6.39 sec  <<< FAILURE!
+org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression nomeshd@gmail.com because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string 'nomeshd@gmail.com' is not a valid XPath expression.
+  (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
 Build info: version: '4.5.3', revision: '4b786a1e430'
 System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '13.0', java.version: '11.0.16.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08ed8b25e7b53217f9b2de3dc0a71e7f, clickElement {id=5595840d-a335-41e4-8f52-8191a2cc41b5}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.87, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/jh/yknp3z0d2gd...}, goog:chromeOptions: {debuggerAddress: localhost:53277}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53277/devtoo..., se:cdpVersion: 107.0.5304.87, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on MAC (08ed8b25e7b53217f9b2de3dc0a71e7f)] -> xpath: //span[text()='Sign in']]
-Session ID: 08ed8b25e7b53217f9b2de3dc0a71e7f
+Command: [a5bf7838a40db59eb7fe7a21b28c6ebc, findElement {using=xpath, value=nomeshd@gmail.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/jh/yknp3z0d2gd...}, goog:chromeOptions: {debuggerAddress: localhost:60166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60166/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a5bf7838a40db59eb7fe7a21b28c6ebc
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -23,8 +24,11 @@ Session ID: 08ed8b25e7b53217f9b2de3dc0a71e7f
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at pageEvents.HomePageEvents.clickOnSignInButton(HomePageEvents.java:36)
-	at SampleTest.samplemethodForEmailEntering(SampleTest.java:11)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at utils.ElementFetch.getWebElement(ElementFetch.java:19)
+	at pageEvents.LoginPageEvents.enterEmailId(LoginPageEvents.java:20)
+	at SampleTest.samplemethodForEmailEntering(SampleTest.java:15)
 
