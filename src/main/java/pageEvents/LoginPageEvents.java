@@ -17,7 +17,7 @@ public class LoginPageEvents {
 
     public void enterEmailId(String email){
         BaseTest.logger.info("Entering the Email ID..!");
-        new ElementFetch().getWebElement("XPATH", LoginPageElements.emailAddress).sendKeys(email);
+        new ElementFetch().getWebElement("XPATH", LoginPageElements.loginText).sendKeys(email);
     }
 
 }

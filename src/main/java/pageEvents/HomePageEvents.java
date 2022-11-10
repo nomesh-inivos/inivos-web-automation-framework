@@ -34,8 +34,5 @@ public class HomePageEvents {
         wait.until(ExpectedConditions.elementToBeClickable(
                 elementFetch.getWebElement("XPATH", HomePageElements.signInButton))).click();
 
-        wait.until(ExpectedConditions.elementToBeClickable(
-                elementFetch.getWebElement("XPATH", HomePageElements.securitySignInButton))).click();
-
     }
 }
