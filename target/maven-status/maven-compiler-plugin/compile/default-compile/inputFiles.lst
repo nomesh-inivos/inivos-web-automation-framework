@@ -1,5 +1,10 @@
-/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/pageEvents/HomePageEvent.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/pageEvents/LoginPageEvents.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/pageEvents/HomePageEvents.java
 /Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/utils/Constants.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/utils/ElementFetch.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/pageObjects/HomePageElements.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/pageObjects/LoginPageElements.java
+/Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/utils/RetryAnalyzer.java
 /Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/utils/BaseTest.java
 /Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/utils/SuitListener.java
 /Users/nomeshd/Downloads/inivos-web-automation-framework/src/main/java/driver/Driver.java

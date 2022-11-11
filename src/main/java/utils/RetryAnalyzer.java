@@ -3,9 +3,12 @@ package utils;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
+/**
+ * Retry the failed test cases again for 'retryCount' number of times.
+ */
 public class RetryAnalyzer implements IRetryAnalyzer {
   int count = 0;
-  int retryCount = 0;
+  int retryCount = 0; //number of retry efforts
 
     @Override
     public boolean retry(ITestResult iTestResult) {

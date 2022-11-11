@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Testing Suit]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utils.SuitListener"/>
+  </listeners>
+  <test thread-count="5" name="Regression(failed)" verbose="0">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="SampleTest">
+        <methods>
+          <include name="AfterTest"/>
+          <include name="beforeTest"/>
+          <include name="samplemethodForEmailEntering"/>
+          <include name="afterMethodTest"/>
+          <include name="beforeMethodTest"/>
+        </methods>
+      </class> <!-- SampleTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Testing Suit] -->

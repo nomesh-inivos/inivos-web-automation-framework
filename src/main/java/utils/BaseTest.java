@@ -16,14 +16,15 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.lang.reflect.Method;
-import java.util.concurrent.TimeUnit;
+
+import static utils.CommonUtils.*;
 
 public class BaseTest {
 
     private static WebDriver driver;
     private static ExtentReports extent;
     private static ExtentHtmlReporter htmlReporter;
-    private static ExtentTest logger;
+    public static ExtentTest logger;
 
 
     @BeforeTest
@@ -45,9 +46,8 @@ public class BaseTest {
         logger = extent.createTest(testMethod.getName());
         setupDriver(browserName);
         driver.manage().window().maximize();
-        driver.get(Constants.URL);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
+        driver.get("https://www.amazon.com");
+   }
 
     @AfterMethod
     public void afterMethodTest(ITestResult result) {
@@ -70,18 +70,40 @@ public class BaseTest {
 
     @AfterTest
     public void AfterTest() {
+        if(driver !=null){
+            driver.quit();
+        }
         extent.flush();
     }
 
+    /**
+     * Setup the Browser driver based on BrowserName and OS type
+     * @param browserName
+     */
     public void setupDriver(String browserName) {
+        String driverPath= System.getProperty("user.dir") + File.separator + "drivers" + File.separator ;
+
         if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver. chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
+            if(isMac()){ driverPath+= "chromedriver_mac";
+            } else if (isWindows()) { driverPath+= "chromedriver.exe";
+            }else if (isLinux()) { driverPath+= "chromedriver_linux"; }
+
+            System.setProperty("webdriver.chrome.driver", driverPath);
+            System.out.println("driverPath: "+driverPath);
             driver = new ChromeDriver();
+
         } else if (browserName.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "geckodriver");
+
+            if(isMac()){   driverPath+= "geckodriver_mac";
+            }else if (isWindows()) { driverPath+= "geckodriver.exe";
+            }else if (isLinux()) { driverPath+= "geckodriver_linux_64"; }
+
+            System.setProperty("webdriver.gecko.driver", driverPath);
+            System.out.println("driverPath: "+driverPath);
             driver = new FirefoxDriver();
+
         } else {
-            System.setProperty("webdriver. chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
             driver = new ChromeDriver();
         }
     }

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Testing_Suit" class="navigator-link">
-              <span class="suite-name border-passed">Testing Suit</span>
+              <span class="suite-name border-failed">Testing Suit</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Testing_Suit" class="hide-methods failed suite-Testing_Suit"> (hide)</a> <!-- hide-methods failed suite-Testing_Suit -->
+                      <a href="#" panel-name="suite-Testing_Suit" class="show-methods failed suite-Testing_Suit"> (show)</a> <!-- show-methods failed suite-Testing_Suit -->
+                    </span>
+                    <div class="method-list-content failed suite-Testing_Suit">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testing_Suit" title="SampleTest" class="method navigator-link" hash-for-method="samplemethodForEmailEntering">samplemethodForEmailEntering</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Testing_Suit -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -104,6 +118,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Testing_Suit" class="panel Testing_Suit">
+          <div class="suite-Testing_Suit-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SampleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="samplemethodForEmailEntering">
+                  </a> <!-- samplemethodForEmailEntering -->
+                  <span class="method-name">samplemethodForEmailEntering</span>
+                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression nomeshd@gmail.com because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;nomeshd@gmail.com&apos; is not a valid XPath expression.
+  (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.5.3&apos;, revision: &apos;4b786a1e430&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;13.0&apos;, java.version: &apos;11.0.16.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a5bf7838a40db59eb7fe7a21b28c6ebc, findElement {using=xpath, value=nomeshd@gmail.com}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: /var/folders/jh/yknp3z0d2gd...}, goog:chromeOptions: {debuggerAddress: localhost:60166}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:60166/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a5bf7838a40db59eb7fe7a21b28c6ebc
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at utils.ElementFetch.getWebElement(ElementFetch.java:19)
+	at pageEvents.LoginPageEvents.enterEmailId(LoginPageEvents.java:20)
+	at SampleTest.samplemethodForEmailEntering(SampleTest.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 40 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testing_Suit-class-failed -->
         </div> <!-- panel Testing_Suit -->
         <div panel-name="test-xml-Testing_Suit" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -114,9 +170,13 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Testing Suit&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utils.SuitListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Regression&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;BaseTest&quot;/&gt;
+      &lt;class name=&quot;SampleTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Regression --&gt;
 &lt;/suite&gt; &lt;!-- Testing Suit --&gt;
@@ -156,12 +216,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'samplemethodForEmailEntering')
+data.setCell(0, 2, 'SampleTest')
+data.setCell(0, 3, 6275);
 window.suiteTableData['Testing_Suit']= { tableData: data, tableDiv: 'times-div-Testing_Suit'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Testing_Suit">
               </div> <!-- times-div-Testing_Suit -->
             </div> <!-- times-div -->
@@ -187,14 +251,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">BaseTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">SampleTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethodTest(chrome, public void SampleTest.samplemethodForEmailEntering())</span>
+                <span class="method-start">77 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">samplemethodForEmailEntering</span>
+                <span class="method-start">9214 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethodTest([TestResult name=samplemethodForEmailEntering status=FAILURE method=SampleTest.samplemethodForEmailE...)</span>
+                <span class="method-start">15601 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">AfterTest</span>
-                <span class="method-start">60 ms</span>
+                <span class="method-start">15714 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
