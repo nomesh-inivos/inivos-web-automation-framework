@@ -94,9 +94,9 @@ public class BaseTest {
 
         } else if (browserName.equalsIgnoreCase("firefox")) {
 
-            if(isMac()){   driverPath+= "geckodriver";
+            if(isMac()){   driverPath+= "geckodriver_mac";
             }else if (isWindows()) { driverPath+= "geckodriver.exe";
-            }else if (isLinux()) { driverPath+= "geckodriver"; }
+            }else if (isLinux()) { driverPath+= "geckodriver_linux_64"; }
 
             System.setProperty("webdriver.gecko.driver", driverPath);
             System.out.println("driverPath: "+driverPath);
